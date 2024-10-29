@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
 
 class DashboardPage extends StatelessWidget {
+  final String username;
+
+  DashboardPage({required this.username});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Halaman Awal'),
+        title: Text('Dashboard'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(height: 5),
-            Flexible(
-              child: Image.asset(
-                'assets/image2.jpg',
-                fit: BoxFit.cover,
-              ),
-            ),
-          ],
+        child: Text(
+          'Selamat datang, $username!',
+          style: TextStyle(fontSize: 24),
         ),
       ),
     );
